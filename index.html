@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.1.4/dist/mindar-image.prod.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.1.4/dist/mindar-image-aframe.prod.js"></script>
 </head>
 
 <body>
-  <a-scene mindar-image="imageTargetSrc: targets.mind;" embedded>
-    
+  <a-scene 
+    mindar-image="imageTargetSrc: targets.mind; autoStart: true;"
+    embedded
+    color-space="sRGB"
+    renderer="colorManagement: true, physicallyCorrectLights"
+    vr-mode-ui="enabled: false"
+    device-orientation-permission-ui="enabled: false"
+  >
+
     <a-assets>
-      <img id="card" src="https://i.imgur.com/your-image.jpg">
+      <img id="card" src="https://cdn.pixabay.com/photo/2017/01/31/13/14/animal-2028258_1280.png">
     </a-assets>
 
     <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
