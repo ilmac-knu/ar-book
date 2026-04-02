@@ -8,9 +8,14 @@
 <body style="margin:0; overflow:hidden;">
   <a-scene embedded arjs="sourceType: webcam;">
     
-    <a-marker preset="hiro">
-      <a-box position="0 0.5 0" color="red"></a-box>
-    </a-marker>
+    <!-- 항상 보이는 콘텐츠 -->
+    <a-entity position="0 0 -3">
+      <a-text value="일맥회에 오신 것을 환영합니다"
+              align="center"
+              color="yellow"
+              width="4">
+      </a-text>
+    </a-entity>
 
     <a-entity camera></a-entity>
   </a-scene>
